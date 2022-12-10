@@ -1,0 +1,74 @@
+print("\tTic-Tac-Toe\n\n")
+print("Layout and position of the grid:\n")
+print("1|2|3\n4|5|6\n7|8|9")
+flag=1
+Player="X"
+l=["_", "_", "_", "_", "_", "_", "_", "_", "_"]
+
+for i in range(9):
+    def pos_func():
+        global flag
+        global Player
+        global l
+        pos=int(input(f"Enter position for player {Player}: "))
+        if l[pos-1]=="_":
+            l[pos-1]=Player
+            print(f"{l[0]}|{l[1]}|{l[2]}\n{l[3]}|{l[4]}|{l[5]}\n{l[6]}|{l[7]}|{l[8]}\n")
+            if flag==1:
+                Player="O"
+                flag=0
+            elif flag==0:
+                Player="X"
+                flag=1
+        else:
+            print("\nToken already enterd at that position.")
+            pos_func()
+    pos_func()
+    if l[0]=="X" and l[1]=="X" and l[2]=="X":
+        print("Player X wins")
+        break
+    elif l[0]=="O" and l[1]=="O" and l[2]=="O":
+        print("Player O wins")
+        break
+    elif l[3]=="X" and l[4]=="X" and l[5]=="X":
+        print("Player X wins")
+        break
+    elif l[3]=="O" and l[4]=="O" and l[5]=="O":
+        print("Player O wins")
+        break
+    elif l[6]=="X" and l[7]=="X" and l[8]=="X":
+        print("Player X wins")
+        break
+    elif l[6]=="O" and l[7]=="O" and l[8]=="O":
+        print("Player O wins")
+        break
+    elif l[0]=="X" and l[3]=="X" and l[6]=="X":
+        print("Player X wins")
+        break
+    elif l[0]=="O" and l[3]=="O" and l[6]=="O":
+        print("Player O wins")
+        break
+    elif l[1]=="X" and l[4]=="X" and l[7]=="X":
+        print("Player X wins")
+        break
+    elif l[1]=="O" and l[4]=="O" and l[7]=="O":
+        print("Player O wins")
+        break
+    elif l[2]=="X" and l[5]=="X" and l[8]=="X":
+        print("Player X wins")
+        break
+    elif l[2]=="O" and l[5]=="O" and l[8]=="O":
+        print("Player O wins")
+        break
+    elif l[0]=="X" and l[4]=="X" and l[8]=="X":
+        print("Player X wins")
+        break
+    elif l[0]=="O" and l[4]=="O" and l[8]=="O":
+        print("Player O wins")
+        break
+    elif l[2]=="X" and l[4]=="X" and l[6]=="X":
+        print("Player X wins")
+        break
+    elif l[2]=="O" and l[4]=="O" and l[6]=="O":
+        print("Player O wins")
+        break
